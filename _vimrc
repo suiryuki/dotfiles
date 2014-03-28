@@ -208,3 +208,7 @@ set clipboard=unnamed,autoselect
 "nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 "nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
 
+" unite setting
+source ~/dotfiles/.vimrc.unite
+
+
