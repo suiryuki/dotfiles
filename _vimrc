@@ -66,6 +66,8 @@ NeoBundle 'smartword'
 " quickrun.vim
 NeoBundle 'thinca/vim-quickrun'
 
+" taglis
+NeoBundle 'taglist.vim'
 " perldoc and phpmanual
 NeoBundle 'thinca/vim-ref'
 
@@ -102,8 +104,10 @@ NeoBundle 'banyan/recognize_charcode.vim'
 " }}}
 
 " Utility {{{
+" vimのshell
+NeoBundle 'Shougo/vimshell.git'
 
-" }}}
+"  }}}
 
 " ColorSchema{{{
  " color schema 256
@@ -154,7 +158,7 @@ exe "!" . &ft . " %"
 
 " indent color {{{
 
-" colorscheme desert256
+colorscheme desert256
 " set background=dark
 
 set tabstop=4
@@ -162,23 +166,23 @@ set shiftwidth=4
 set expandtab
 
 " vim立ち上げたときに、自動的にvim-indent-guidesをオンにする
-let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_enable_on_vim_startup = 1
 " ガイドをスタートするインデントの量
-let g:indent_guides_start_level = 2
+" let g:indent_guides_start_level = 2
 " 自動カラーを無効にする
-let g:indent_guides_auto_colors = 0
+" let g:indent_guides_auto_colors = 0
 " 奇数インデントのカラー
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
 " 偶数インデントのカラー
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 
 "hi IndentGuidesOdd  ctermbg=black
 "hi IndentGuidesEven ctermbg=darkgrey
 
 " ハイライト色の変化の幅
-let g:indent_guides_color_change_percent = 30
+" let g:indent_guides_color_change_percent = 30
 " ガイドの幅
-let g:indent_guides_guide_size = 1
+" let g:indent_guides_guide_size = 1
 
 " }}}
 
@@ -192,24 +196,11 @@ set clipboard=unnamed,autoselect
 " }}}
 "
 "
- "" unite.vim {{{
- " The prefix key.
-" nnoremap    [unite]   <Nop>
-" nmap    <Leader>f [unite]
 
-
-" Unite
-" NeoBundle 'Shougo/unite.vim'
-"let g:unite_enable_start_insert=1
-"let g:unite_source_history_yank_enable =1
-"let g:unite_source_file_mru_limit = 200
-"nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
-"nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
-"nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-"nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
-"nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
-
+" basic setting
+source ~/dotfiles/_vimrc.basic
 " unite setting
 source ~/dotfiles/.vimrc.unite
-
+" statusline setting
+source ~/dotfiles/_vimrc.statusline
 
