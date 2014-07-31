@@ -68,6 +68,15 @@ source $HOME/dotfiles/_zshrc.custom
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# add site-packages
+export PATH="/usr/local/lib/python2.7/site-packages:$PATH"
+
+# add npm path
+export PATH="/usr/local/lib/node_modules:$PATH"
+
+# add packer path
+export PATH="/Applications/Packer:$PATH"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
