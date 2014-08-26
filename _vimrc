@@ -106,7 +106,8 @@ NeoBundle 'banyan/recognize_charcode.vim'
 " Utility {{{
 " vimのshell
 NeoBundle 'Shougo/vimshell.git'
-
+" powerline
+NeoBundle 'Lokaltog/vim-powerline'
 "  }}}
 
 " ColorSchema{{{
@@ -120,7 +121,14 @@ NeoBundle 'yuroyoro/yuroyoro256.vim'
 " Unite {{{
 
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc', {
+\ 'build': {
+\ 'windows': 'make -f make_mingw32.mak',
+\ 'cygwin': 'make -f make_cygwin.mak',
+\ 'mac': 'make -f make_mac.mak',
+\ 'unix': 'make -f make_unix.mak',
+\ }
+\}
 NeoBundle 'tsukkee/unite-help'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'Shougo/neomru.vim'

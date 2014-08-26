@@ -1,10 +1,19 @@
 " 入力モードで開始
 let g:utite_enable_start_insert=1
+" yank mode
+let g:unite_source_history_yank_enable =1
+
+let g:unite_source_file_mru_limit = 200
+
 " バッファ一覧
 noremap <C-P> :Unite buffer<CR>
-" " ファイル一覧
+" ファイル一覧
 noremap <C-N> :Unite -buffer-name=file file<CR>
-" " 最近使ったファイルの一覧
+" 最近使ったファイルの一覧
 noremap <C-Z> :Unite file_mru<CR>
+" yank
+nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
+
+nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
 
 
