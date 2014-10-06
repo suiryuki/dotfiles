@@ -16,4 +16,6 @@ nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
 
 nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
 
+nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>

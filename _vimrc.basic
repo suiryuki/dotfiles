@@ -1,6 +1,10 @@
 set encoding=utf-8
 
+" 256色に対応するため
 set t_Co=256
+
+" 改行をなくす
+set tw=0
 
 " カーソル行をハイライト
 set cursorline
@@ -14,3 +18,6 @@ augroup END
 hi clear CursorLine
 hi CursorLine gui=underline
 highlight CursorLine ctermbg=black guibg=black
+
+" Escの2回押しでハイライト消去
+nmap <ESC><ESC> ;nohlsearch<CR><ESC>
