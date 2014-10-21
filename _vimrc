@@ -1,146 +1,14 @@
 set nocompatible
 filetype off
+filetype indent off
+filetype plugin off
 
-if has('vim_starting')
-	set runtimepath+=~/dotfiles/vimfiles/bundle/neobundle.vim
-
-	call neobundle#rc(expand('~/dotfiles/vimfiles/bundle/'))
-endif
-
-" Edit {{{
-
-" コメント処理
-NeoBundle 'scrooloose/nerdcommenter.git'
-
-" -- でメソッドチェーン整形
-NeoBundle 'c9s/cascading.vim'
-
-" visually indent guide
-NeoBundle 'nathanaelkane/vim-indent-guides'
-
-" XMLとかHTMLとかの編集機能を強化する
-NeoBundle 'xmledit'
-
-" Align : 高機能整形・桁揃えプラグイン
-NeoBundle 'Align'
-
-" フィルタリングと整形
-NeoBundle 'godlygeek/tabular'
-
-" マルチバイト対応の整形
-" NeoBundle 'hlmesuke/vim-alignta'
-
-" undo履歴を追える
-NeoBundle 'Gundo'
-
-" surround.vim テキストを括弧で囲む/削除する
-" NeoBundle 'tpope/surround.vim'
-
-" smartchr.vim ==などの前後を整形
-NeoBundle 'smartchr'
+source ~/dotfiles/_vimrc.bundle
 
 
-"}}}
-
-" Completion {{{
-" 補完
-NeoBundle 'Shougo/neocomplcache'
-
-" python
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'kevinw/pyflakes-vim'
-"NeoBundle 'nathanaelkane/vim-indent-guides'
-
-" }}}
-
-" Searching/Moving{{{
-" smooth_scroll.vim
-NeoBundle 'yuroyoro/smooth_scroll.vim'
-
-" vim-smartword : 単語移動がスマート
-NeoBundle 'smartword'
-
-" }}}
-
-" Programming {{{
-" quickrun.vim
-NeoBundle 'thinca/vim-quickrun'
-
-" taglis
-NeoBundle 'taglist.vim'
-" perldoc and phpmanual
-NeoBundle 'thinca/vim-ref'
-
-" SQLUtilities : SQL整形、生成
-NeoBundle 'SQLUtilities'
-
-" pydiction : Python用の入力補完
-NeoBundle 'Pydiction'
-" }}}
-
-" Syntax {{{
-" haml
-NeoBundle 'haml.zip'
-
-" JavaScript
-NeoBundle 'JavaScript-syntax'
-
-" jQuery
-NeoBundle 'jQuery'
-
-" markdown
-NeoBundle 'tpope/vim-markdown'
-
-" coffee script
-NeoBundle 'kchmck/vim-coffee-script'
-
-" python
-NeoBundle 'yuroyoro/vim-python'
-
-" }}}
-
-" Encording {{{
-NeoBundle 'banyan/recognize_charcode.vim'
-" }}}
-
-" Utility {{{
-" vimのshell
-NeoBundle 'Shougo/vimshell.git'
-" powerline
-NeoBundle 'Lokaltog/vim-powerline'
-"  }}}
-
-" ColorSchema{{{
- " color schema 256
-NeoBundle 'desert256.vim'
-NeoBundle 'mrkn256.vim'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'yuroyoro/yuroyoro256.vim'
-" }}}
-
-" Unite {{{
-
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc', {
-\ 'build': {
-\ 'windows': 'make -f make_mingw32.mak',
-\ 'cygwin': 'make -f make_cygwin.mak',
-\ 'mac': 'make -f make_mac.mak',
-\ 'unix': 'make -f make_unix.mak',
-\ }
-\}
-NeoBundle 'tsukkee/unite-help'
-NeoBundle 'h1mesuke/unite-outline'
-NeoBundle 'Shougo/neomru.vim'
-  " NeoBundle 'Sixeight/unite-grep'
-NeoBundle 'basyura/unite-rails'
-NeoBundle 'thinca/vim-unite-history'
-NeoBundle 'tsukkee/unite-tag'
-NeoBundle 'choplin/unite-vim_hacks'
-" }}}
-"
 filetype plugin on
 filetype indent on
+
 syntax on
 set number
 
@@ -166,7 +34,7 @@ exe "!" . &ft . " %"
 
 " indent color {{{
 
-colorscheme desert256
+colorscheme hybrid
 " set background=dark
 
 set tabstop=4
