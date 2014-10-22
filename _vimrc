@@ -1,13 +1,6 @@
 set nocompatible
-filetype off
-filetype indent off
-filetype plugin off
 
 source ~/dotfiles/_vimrc.bundle
-
-
-filetype plugin on
-filetype indent on
 
 syntax on
 set number
