@@ -110,7 +110,9 @@ NeoBundle 'banyan/recognize_charcode.vim'
 NeoBundle 'Shougo/vimshell.git'
 " powerline
 NeoBundle 'Lokaltog/vim-powerline'
-"  }}}
+" unite + project.vim
+NeoBundle 'kien/ctrlp.vim' 
+" }}}
 
 " ColorSchema{{{
  " color schema 256
