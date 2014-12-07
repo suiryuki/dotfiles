@@ -13,7 +13,7 @@ export M2_HOME=/project/olc/localtool/apache-maven-3.0.5
 M2=$M2_HOME/bin
 
 # m2 path
-export PATH=$M2:$PATH
+PATH=$M2:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -70,7 +70,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Customize to your needs...
@@ -78,13 +78,19 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 source $HOME/dotfiles/_zshrc.custom
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+PATH="/usr/local/heroku/bin:$PATH"
 
 # add site-packages
-export PATH="/usr/local/lib/python2.7/site-packages:$PATH"
+# export PATH="/usr/local/lib/python2.7/site-packages:$PATH"
+PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH
+
+# set display 
+DISPLAY=:0
+export DISPLAY
 
 # add npm path
-export PATH="/usr/local/lib/node_modules:$PATH"
+PATH="/usr/local/lib/node_modules:$PATH"
 
 # add packer path
 export PATH="/Applications/Packer:$PATH"

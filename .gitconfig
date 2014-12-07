@@ -169,6 +169,10 @@ cch= "!f() { git cherry -v "$@" | awk '{ if($1 == \"+\"){ color = \"green\" } if
 
   fizzbuzz = "!f() { seq "$@" | awk '$0=NR%15?NR%5?NR%3?$0:\"Fizz\":\"Buzz\":\"FizzBuzz\"' ;}; f"
 
+  ignore = !"f() { local s=$1; shift; \
+           while [ $# -gt 0 ]; do s="$s,$1"; shift; done;\
+           curl "http://www.gitignore.io/api/$s"; }; f"
+
 [http]
   sslVerify = false
 

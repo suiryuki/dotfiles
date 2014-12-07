@@ -21,3 +21,6 @@ highlight CursorLine ctermbg=black guibg=black
 
 " Escの2回押しでハイライト消去
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
+
+" unファイルを作るのをやめる
+:set noundofile
