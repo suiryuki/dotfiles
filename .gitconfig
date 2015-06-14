@@ -13,10 +13,11 @@
   default = upstream # defaultのpush先はtrackingしているリポジトリ
 [core]
   excludesfile = ~/.gitignore # globalな.gitignoreの指定
-  autocrlf = input # CRLFを自動変換
+    autocrlf = input # CRLFを自動変換
+    safecrlf = true
   editor = vim
   quotepath = false
-	pager = lv -c
+    pager = lv -c
 [merge]
   tool = vimdiff
   ff = false
@@ -189,3 +190,9 @@ cch= "!f() { git cherry -v "$@" | awk '{ if($1 == \"+\"){ color = \"green\" } if
   generic = G move-last-line
 
 
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

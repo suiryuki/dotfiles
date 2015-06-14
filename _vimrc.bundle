@@ -6,7 +6,7 @@ filetype plugin off
 if has('vim_starting')
 	set runtimepath+=~/dotfiles/vimfiles/bundle/neobundle.vim
 
-	call neobundle#rc(expand('~/dotfiles/vimfiles/bundle/'))
+	call neobundle#begin(expand('~/dotfiles/vimfiles/bundle/'))
 endif
 
 " Edit {{{
@@ -144,5 +144,6 @@ NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'choplin/unite-vim_hacks'
 " }}}
 "
+call neobundle#end()
 "
 filetype plugin indent on
