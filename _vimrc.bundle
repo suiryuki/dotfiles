@@ -87,6 +87,10 @@ NeoBundle 'haml.zip'
 " JavaScript
 NeoBundle 'JavaScript-syntax'
 
+NeoBundle 'Simple-Javascript-Indenter'
+
+NeoBundle 'vim-javascript-syntax'
+
 " jQuery
 NeoBundle 'jQuery'
 
