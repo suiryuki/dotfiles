@@ -53,6 +53,12 @@ let g:indent_guides_color_change_percent = 30
 " ガイドの幅
 let g:indent_guides_guide_size = 1
 
+" neocomplcacheを有効にする
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+
+
+
 " }}}
 
 "utility {{{
