@@ -26,7 +26,7 @@ exe "!" . &ft . " %"
 "}}}
 
 " indent color {{{
-
+let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
 " set background=dark
 
@@ -47,7 +47,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgr
 
 "hi IndentGuidesOdd  ctermbg=black
 "hi IndentGuidesEven ctermbg=darkgrey
-
 " ハイライト色の変化の幅
 let g:indent_guides_color_change_percent = 30
 " ガイドの幅

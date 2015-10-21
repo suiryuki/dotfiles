@@ -89,10 +89,13 @@ NeoBundle 'JavaScript-syntax'
 
 NeoBundle 'Simple-Javascript-Indenter'
 
-NeoBundle 'vim-javascript-syntax'
+NeoBundle 'jelera/vim-javascript-syntax'
 
 " jQuery
 NeoBundle 'jQuery'
+
+" Java
+NeoBundle 'vim-scripts/javacomplete'
 
 " markdown
 NeoBundle 'tpope/vim-markdown'
