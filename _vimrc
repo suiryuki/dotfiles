@@ -28,7 +28,7 @@ exe "!" . &ft . " %"
 " indent color {{{
 let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
-" set background=dark
+set background=dark
 
 set tabstop=4
 set shiftwidth=4

@@ -68,8 +68,16 @@ NeoBundle 'smartword'
 " quickrun.vim
 NeoBundle 'thinca/vim-quickrun'
 
-" taglis
-NeoBundle 'taglist.vim'
+" tagbar
+NeoBundleLazy "majutsushi/tagbar", {
+      \ "autoload": { "commands": ["TagbarToggle"] }}
+if ! empty(neobundle#get("tagbar"))
+   " Width (default 40)
+  let g:tagbar_width = 20
+  " Map for toggle
+  nn <silent> <leader>t :TagbarToggle<CR>
+endif
+
 " perldoc and phpmanual
 NeoBundle 'thinca/vim-ref'
 
@@ -95,7 +103,25 @@ NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jQuery'
 
 " Java
-NeoBundle 'vim-scripts/javacomplete'
+NeoBundle 'vim-scripts/javacomplete', {
+            \   'build': {
+            \       'cygwin': 'javac autoload/Reflection.java',
+            \       'mac': 'javac autoload/Reflection.java',
+            \       'unix': 'javac autoload/Reflection.java',
+            \   },
+            \}
+
+NeoBundle 'java.vim'
+
+NeoBundle 'thinca/vim-localrc'
+
+NeoBundle 'tpope/vim-classpath'
+
+NeoBundle 'scrooloose/syntastic'
+" NeoBundle 'hoelzro/javaid.vim'
+
+" rooter
+NeoBundle "airblade/vim-rooter"
 
 " markdown
 NeoBundle 'tpope/vim-markdown'
